@@ -1,0 +1,115 @@
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-color: #111;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 300ms ease, box-shadow 300ms ease;
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4.5rem;
+  padding: 0 2rem;
+}
+
+
+.nav-child {
+  display: flex;
+  align-items: center;
+  flex-direction: row; 
+  gap: 0.5rem;
+  position: relative;
+}
+
+
+.nav-child img {
+  height: 2.2rem;   
+  width: auto;
+  object-fit: contain;
+}
+
+
+.nav-child h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+
+nav a {
+  display: flex;              
+  align-items: center;        
+  gap: 0.5rem;                
+  text-decoration: none;
+  color: #fff;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffd700; 
+}
+
+
+.nav-child i {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: transform 200ms ease;
+}
+
+.nav-child i:hover {
+  transform: scale(1.1);
+  color: #ffd700;
+}
+
+
+.nav-child .item-count {
+  position: absolute;
+  top: -1.0rem;
+  right: -1.0rem;
+  background-color: crimson;
+  color: #e7dcdc;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0.2rem 0.4rem;
+  border-radius: 50%;
+  line-height: 1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+
+.shrink-nav {
+  background-color: #fff;
+  color: #000;
+  height: 4rem;
+}
+
+.shrink-nav a {
+  color: #000;
+}
+
+.shrink-nav i {
+  color: #000;
+}
+
+
+/* === Cart Badge Animation === */
+.item-count.bump {
+  animation: bump .3s ease;
+}
+
+@keyframes bump {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.3); }
+  60% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
